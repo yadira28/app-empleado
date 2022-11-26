@@ -10,13 +10,13 @@ export class CaracteristicasEmpleadoCComponent implements OnInit {
   @Output() caracteristicasEmpleados = new EventEmitter<string>();
 
 
-  constructor( private miServicio:ServicioEmpleadosService) { }
+  //constructor( private miServicio:ServicioEmpleadosService) { }
 
   ngOnInit(): void {
   }
   agregarCaracteristicas(value: string){
-    this.miServicio.muestraMensaje(value);
-    this.caracteristicasEmpleados.emit(value);
+   // this.miServicio.muestraMensaje(value);
+   // this.caracteristicasEmpleados.emit(value);
   }
 
 }
