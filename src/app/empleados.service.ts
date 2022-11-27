@@ -41,5 +41,8 @@ import { ServicioEmpleadosService } from "./servicio-empleados.service";
 
   }
 
+  eliminarEmpleado(indice:number){
+    this.empleados.splice(indice,1);
+  }
 
 }
