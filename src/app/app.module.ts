@@ -15,7 +15,8 @@ import { RouterModule, Routes} from '@angular/router';
 import { ActualizaComponentComponent } from './actualiza-component/actualiza-component.component';
 import { ErrorPerzonalizadoComponent } from './error-perzonalizado/error-perzonalizado.component';
 import { DataServices } from './data.services';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component'
 
 const appRoutes:Routes=[
   {path:'', component:HomeComponentComponent},
@@ -23,6 +24,7 @@ const appRoutes:Routes=[
   {path:'quienes', component:QuienesComponentComponent},
   {path:'contacto', component:ContactoComponentComponent},
   {path:'actualiza/:id', component:ActualizaComponentComponent},
+  {path: 'login', component:LoginComponent},
   {path: '**', component:ErrorPerzonalizadoComponent}
 
 
@@ -37,7 +39,8 @@ const appRoutes:Routes=[
     ProyectosComponentComponent,
     QuienesComponentComponent,
     ContactoComponentComponent,
-    ActualizaComponentComponent
+    ActualizaComponentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule, 
