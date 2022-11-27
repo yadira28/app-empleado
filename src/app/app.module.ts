@@ -13,13 +13,17 @@ import { QuienesComponentComponent } from './quienes-component/quienes-component
 import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
 import { RouterModule, Routes} from '@angular/router';
 import { ActualizaComponentComponent } from './actualiza-component/actualiza-component.component';
+import { ErrorPerzonalizadoComponent } from './error-perzonalizado/error-perzonalizado.component';
+import { DataServices } from './data.services';
+import {HttpClientModule} from '@angular/common/http'
 
 const appRoutes:Routes=[
   {path:'', component:HomeComponentComponent},
   {path:'proyectos', component:ProyectosComponentComponent},
   {path:'quienes', component:QuienesComponentComponent},
   {path:'contacto', component:ContactoComponentComponent},
-  {path:'actualiza/:id', component:ActualizaComponentComponent}
+  {path:'actualiza/:id', component:ActualizaComponentComponent},
+  {path: '**', component:ErrorPerzonalizadoComponent}
 
 
 ];
@@ -38,9 +42,10 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule, 
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
   ],
-  providers: [ServicioEmpleadosService, EmpleadosService],
+  providers: [ServicioEmpleadosService, EmpleadosService, DataServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
