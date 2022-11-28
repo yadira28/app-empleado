@@ -16,7 +16,7 @@ export class CaracteristicasEmpleadoCComponent implements OnInit {
   }
   agregarCaracteristicas(value: string){
    // this.miServicio.muestraMensaje(value);
-   // this.caracteristicasEmpleados.emit(value);
+    this.caracteristicasEmpleados.emit(value);
   }
 
 }
